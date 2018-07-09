@@ -5,8 +5,12 @@ import { GoogleScope, Metrics } from './constants/enums';
 async function main() {
   console.log('Authorizing client...');
 
+  /**
+   * To get a key file, see Step 1 of
+   * https://developers.google.com/analytics/devguides/reporting/core/v3/quickstart/service-php
+   */
   const auth = await google.auth.getClient({
-    keyFile: __dirname + '/gcloud_api_key.json',
+    keyFile: __dirname + '/private_key.json',
     scopes: GoogleScope.ANALYTICS_READONLY
   });
 

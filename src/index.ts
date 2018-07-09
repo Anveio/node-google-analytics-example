@@ -27,6 +27,7 @@ async function main() {
    */
   const { data } = await analytics.data.realtime.get({
     // The profile ID is found under Dashboard > Admin > View Settings
+    // Replace this with your actual profile ID
     ids: 'ga:178185000',
     metrics: Metrics.ACTIVE_USERS
   });
